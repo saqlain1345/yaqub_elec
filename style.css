@@ -141,7 +141,7 @@ nav .fa {
         position: fixed;
         background: #14063a;
         color: #fff;
-        height: 634px;
+        height: 100vh;
         width: 200px;
         top: 0;
         right: -200px;
@@ -451,3 +451,11 @@ nav .fa {
 .workingHours p{
     padding: 5px;
 }
+
+.buttonUp{
+    background-color: #14063a;
+    display: flex;
+    justify-content: center;
+    
+}
+
