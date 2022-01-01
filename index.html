@@ -26,25 +26,28 @@
         <div class="nav_links" id="navLinks">
           <i class="fa fa-times" onclick="hideMenu()"></i>
           <ul>
-            <li><a>Home</a></li>
-            <li><a>Updates</a></li>
-            <li><a>Testimonials</a></li>
-            <li><a>Gallery</a></li>
-            <li><a>Contact</a></li>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#updates">Updates</a></li>
+            <li><a href="#testi">Testimonials</a></li>
+            <li><a href="#gallerys">Gallery</a></li>
+            <li><a href="#contactus">Contact</a></li>
           </ul>
         </div>
         <i class="fa fa-bars" onclick="showMenu()"></i>
       </nav>
-
-      <div class="text-box">
+      
+      <div class="text-box" id="home">
         <img src="./images/hero3.png" alt="" />
         <h1>Yaqub Electricals Work</h1>
         <p>Kambipur - Bangalore</p>
-        <a href="" class="hero-btn">Get Quote</a>
+        <span>Electrical Installation and Services in Bengaluru</span>
+        <a href="getQuote.html" class="hero-btn">Get Quote</a>
+        <a href="tel: +918971443116" class="hero-btn" >Call Now</a>
+
       </div>
     </section>
     <!-- ------------------updates  section ----------------------------------------- -->
-    <section class="update">
+    <section class="update" id="updates">
       <h1>Updates</h1>
       <p>Recently developed updates</p>
       <div class="update-img">
@@ -53,7 +56,7 @@
     </section>
 
     <!-- ----------testimonials section ------------------------------------ -->
-    <section class="testimonials">
+    <section class="testimonials" id="testi">
       <h1>Testimonials</h1>
       <p>
         What Our Customers Says
@@ -96,7 +99,7 @@
     </section>
  <!-- ----------------------gallery section---------------------------- -->
 
- <section class="gallery">
+ <section class="gallery" id="gallerys">
     <h1>Gallery</h1>
       <p>
         We carry this kind of work and likely more other with great intrest.
@@ -125,7 +128,7 @@
       </div>
  </section>
 <!-- ----------------contacts section page --------------------------------     -->
- <section class="location">
+ <section class="location" id="contactus">
    <h1>Contact Us</h1>
   <iframe
         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d497698.66007493954!2d77.3507338580827!3d12.954517011116248!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae1670c9b44e6d%3A0xf8dfc3e8517e4fe0!2sBengaluru%2C%20Karnataka!5e0!3m2!1sen!2sin!4v1632483326531!5m2!1sen!2sin"
@@ -144,11 +147,11 @@
             <i class="fas fa-home"></i>
             <span>
               <h5>GruhaLakshmi Layout, Kambipura, Kambalgudu post </h5>
-              <p> Kengeri District-560060 Karnataka, INDIA</p>
+              <p> Kengeri District-560074 Karnataka, INDIA</p>
             </span>
           </div>
           <div>
-            <i class="fas fa-phone"></i>
+            <a href="tel: +918971443116"><i class="fas fa-phone"></i></a>
             <span>
               <h5>+91-8971443116</h5>
               <p>Reach me out for any work... </p>
@@ -162,19 +165,32 @@
             </span>
           </div>
         </div>
-        <div class="contact-col">
+        <div class="workingHours">
+          <h3>Opening Hours</h3>
+          <p>Mon: 10:00 am - 8:00 pm</p>
+          <p>Tue: 10:00 am - 8:00 pm</p>
+          <p>Wed: 10:00 am - 8:00 pm</p>
+          <p>Thu: 10:00 am - 8:00 pm</p>
+          <p>Fri: 10:00 am - 8:00 pm</p>
+          <p>Sat: 10:00 am - 8:00 pm</p>
+          <p>Sun: 12:00 pm - 8:00 pm</p>
+
+        </div>
+        <div class="contact-col" >
           <form>
             <input type="text" placeholder="Enter Your name" required />
+            <input type="tel" name="" id="" placeholder="Enter Your phone number" required>
             <input type="email" placeholder="Enter Your email" required />
             <textarea rows="8" placeholder="Write your comments" required></textarea>
-            <button type="submit" class="hero-btn red-btn">Send Message</button>
+            <button type="submit" class="hero-btn red-btn">Submit</button>
           </form>
         </div>
+      </div>
       </div>
  </section>
   <section class="footer">
   <h4>About Us</h4>
-  <p>All you need to know about myself</p>
+  <p>Get in touch with me!!</p>
 
        <div class="icons">
      <i class="fab fa-facebook-square"></i>
@@ -184,7 +200,10 @@
       <p>Copyright &copy; 2021 <strong>Saqlain Khan</strong></p>
  
    </section>
-
+  
+   <div class="buttonUp">
+      <a href="#home"><i class="fas fa-arrow-up"></i></a>
+   </div>
 
     <script>
       var navLinks = document.getElementById("navLinks");
@@ -194,6 +213,13 @@
       }
       function hideMenu() {
         navLinks.style.right = "-200px";
+      }
+
+      function scrollToTop() { 
+        window.scrollTo({
+          top:0,
+          behaviour:'smooth'
+        })
       }
     </script>
   </body>
