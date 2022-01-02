@@ -37,13 +37,14 @@
       </nav>
       
       <div class="text-box" id="home">
+        <div class="home_border" data-aos="zoom-out" data-aos-duration="2000">
         <img src="./images/hero3.png" alt="" />
         <h1>Yaqub Electricals Work</h1>
         <p>Kambipur - Bangalore</p>
         <span>Electrical Installation and Services</span>
         <a href="getQuote.html" class="hero-btn">Get Quote</a>
         <a href="tel: +918971443116" class="hero-btn" >Call Now</a>
-
+       </div>
       </div>
     </section>
     <!-- ------------------updates  section ----------------------------------------- -->
@@ -130,14 +131,22 @@
 <!-- ----------------contacts section page --------------------------------     -->
  <section class="location" id="contactus">
    <h1>Contact Us</h1>
-  <iframe
+   <iframe 
+   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d124464.27952538412!2d77.38484625820313!3d12.874975400000007!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae39492fac5b87%3A0xfa2b4a5b7ab23cca!2sYousufkhan%20Residency!5e0!3m2!1sen!2sin!4v1641111286587!5m2!1sen!2sin" 
+   width="600" 
+   height="450" 
+   style="border:0;" 
+   allowfullscreen="" 
+   loading="lazy">
+  </iframe>
+  <!-- <iframe
         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d497698.66007493954!2d77.3507338580827!3d12.954517011116248!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae1670c9b44e6d%3A0xf8dfc3e8517e4fe0!2sBengaluru%2C%20Karnataka!5e0!3m2!1sen!2sin!4v1632483326531!5m2!1sen!2sin"
         width="600"
         height="450"
         style="border: 0"
         allowfullscreen=""
         loading="lazy"
-      ></iframe>
+      ></iframe> -->
     </section>
 
     <section class="contact-us">
@@ -146,8 +155,8 @@
           <div>
             <i class="fas fa-home"></i>
             <span>
-              <h5>GruhaLakshmi Layout, Kambipura, Kambalgudu post </h5>
-              <p> Kengeri District-560074 Karnataka, INDIA</p>
+              <h5>No 434, Gruha Lakshmi Layout, Kambipura 1st block, Kumbal gud post </h5>
+              <p> Bangalore South -560074 Karnataka, INDIA</p>
             </span>
           </div>
           <div>
@@ -176,7 +185,7 @@
           <p>Sun: 12:00 pm - 8:00 pm</p>
 
         </div>
-        <div class="contact-col" >
+        <!-- <div class="contact-col" >
           <form>
             <input type="text" placeholder="Enter Your name" required />
             <input type="tel" name="" id="" placeholder="Enter Your phone number" required>
@@ -184,7 +193,7 @@
             <textarea rows="8" placeholder="Write your comments" required></textarea>
             <button type="submit" class="hero-btn red-btn">Submit</button>
           </form>
-        </div>
+        </div> -->
       </div>
       </div>
  </section>
@@ -193,19 +202,18 @@
   <p>Get in touch with me!!</p>
 
        <div class="icons">
-     <i class="fab fa-facebook-square"></i>
-     <i class="fab fa-instagram"></i>
+    <a href="tel: +918971443116"><i class="fas fa-phone"></i></a>
+     <a href="https://www.instagram.com/yaqub.khan.94/"><i class="fab fa-instagram"></i></a>
     <i class="fas fa-envelope"></i>
  </div>
-      <p>Copyright &copy; 2021 <strong>Saqlain Khan</strong></p>
+      <p>Copyright &copy; 2021 - 2022</p>
  
    </section>
   
    <div class="buttonUp">
       <a href=""><i class="fas fa-arrow-up" onclick="scrollToTop()" style="color: #fff;"></i></a>
    </div>
-
-    <script>
+    <script >
       var navLinks = document.getElementById("navLinks");
 
       function showMenu() {
