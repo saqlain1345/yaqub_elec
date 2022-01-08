@@ -18,6 +18,7 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap"
       rel="stylesheet"
     />
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
 </head>
 <body>
     <div class="contact-col" id="contactForm" style="padding: 10px">
@@ -27,15 +28,98 @@
             <h3 style=" color: #fff; ">Get Quote</h3>
         </div>
 
-          <form>
-            <input type="text" placeholder="Enter Your name" required />
-            <input type="tel" name="" id="" placeholder="Enter Your phone number" required>
-            <input type="email" placeholder="Enter Your email" required />
-            <textarea rows="8" placeholder="Write your comments" required></textarea>
-            <button type="submit" class="hero-btn red-btn">Submit</button>
+         <form class="contact_form" action="javascript:sendmail()" method="POST">
+            <input class="names" type="text"  name="Name" id="Name" placeholder="Enter Your name" required />
+            <input class="phoneNo" type="tel" name="Phone" id="Phone" placeholder="Enter Your phone number" required>
+            <input class="emails" type="email" name="Sender" id="Sender" placeholder="Enter Your email" required />
+            <textarea class="msgs" rows="8" id="Message" placeholder="Write your comments" required></textarea>
+            <button type="submit" class="hero-btn red-btn" onclick="sendmail()">Submit</button>
             <a href="tel: +918971443116" class="hero-btn" >Call Now</a>
           </form>
         </div>
       </div>
+
+  
+      <script>
+        const form = document.querySelector('.contact_form');
+         function sendMsg(e){
+           e.preventDefault();
+              const name = document.querySelector('.names');
+                const phone = document.querySelector('.phoneNo');
+                const email = document.querySelector('.emails');
+                const  msg = document.querySelector('.msgs');
+
+               Email.send({
+              Host : "smtp.gmail.com",
+               Username : "net2saqlain@gmail.com",
+               Password : "19FDE065E8664443E2C91E0E09AB95EB4D88",
+               To : 'saqlain@theretailinsights.com',
+               From : email.value,
+               Subject : "get quote",
+               Body : msg.value,
+              }).then(
+               message => alert("message sent successfull")
+               );
+         }
+      
+         form.addEventListener('submit',sendMsg);
+         
+      </script>
+
+      <!-- <script src="https://code.jquery.com/jquery-2.2.4.js" 
+      integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" 
+      crossorigin="anonymous">
+    </script>
+     <script>  
+
+     function sendmail(){
+    
+			var name = $('#Name').val();
+      var phone = $('#Phone').val();
+			var email = $('#Sender').val();
+      var message = $('#Message').val();
+
+			// var body = $('#body').val();
+
+			var Body='Name: '+name+'<br>Phone: '+phone+'<br>Email: '+email+'<br>Message: '+message;
+			//console.log(name, phone, email, message);
+
+			Email.send({
+        Host : "smtp.gmail.com",
+        Username : "Yaqubkhanking@gmail.com",
+        Password : "330088920BE3F5CA76D1FBDA3F663B6FC21F",
+        To : 'Yaqubkhanking@gmail.com',
+        From : email,
+        Subject : "New message on contact from "+name,
+        Body : Body
+        // Host : "smtp.gmail.com",
+        // Username : "Yaqubkhanking@gmail.com",
+        // Password : "87C740B24C0A039E105F9E8BCB414B61584E",
+        // SecureToken:"cfe98d09-22c3-4962-8c86-70ffe0adac30",
+				// To: 'Yaqubkhanking@gmail.com',
+				// From: "net2saqlain@gmail.com",
+				// Subject: "New message on contact from "+name,
+				// Body: Body
+			}).then(
+				message =>{
+					console.log (message);
+					if(message=='OK'){
+					alert('Your mail has been send. Thank you for connecting.');
+					}
+					else{
+						console.error (message);
+						alert('There is error at sending message. ')
+						
+					}
+
+				}
+			);
+
+
+
+		}
+
+
+    </script>  -->
 </body>
 </html>        
